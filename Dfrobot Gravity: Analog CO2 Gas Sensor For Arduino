@@ -60,6 +60,11 @@ void loop() {
     Serial.print(percentage);
   }
   Serial.print( "ppm" );
+  
+  // Check if CO2 is too high
+  if (percentage >= 5000){
+    Serial .print(" CO2 is high");
+   }
 
   Serial.print( "       Time point:" );
   Serial.print(millis());
